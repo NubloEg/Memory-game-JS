@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family:'Courier New', Courier, monospace;
+}
+
+body{
+    min-height: 100vh;
+    background:url('https://kartinkin.net/pics/uploads/posts/2022-08/1661293375_26-kartinkin-net-p-fon-dlya-igri-piksel-art-krasivo-28.jpg')0 0/cover ;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.box_game{
+    position: relative;
+    max-width: 845px;
+    max-height: 800px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    
+}
+
+.card{
+    height: 190px;
+   
+    width: 160px;
+   
+    cursor: pointer;
+    position: relative;
+    
+}
+
+.close .card__front{
+    transform: perspective(600px) rotateY(-180deg);
+    transition: all 0.5s;
+}
+
+.close .card__back{
+    transform: perspective(600px) rotateY(0deg);
+    transition: all 0.5s;
+}
+
+
+
+
+.card__front{
+    position: absolute;
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    background: #5391EF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+    transform: perspective(600px) rotateY(0deg);
+    transition: all 0.5s;
+}
+
+
+.card__back{
+    display: flex;
+    padding: 30px 20px;
+    position: absolute;
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    background: #0e90b8;
+    transform: perspective(600px) rotateY(180deg);
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: all 0.5s;
+}
+
+
+.image{
+    height: 120px;
+}
+
+.name{
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* #233E66 */
+    color: #233E66;
+
+
+}
+
+
+.end_game{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background:url('https://kartinkin.net/uploads/posts/2021-11/1637940621_1-kartinkin-net-p-moneta-piksel-art-krasivie-oboi-1.jpg') 0 0/cover no-repeat;
+    z-index: 2;
+    transform: translateY(-150%);
+    border-radius:20px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+.end_title{
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 40px;
+    /* #233E66 */
+    color: #ffda36;
+}
+
+.end{
+    transform: translateY(0);
+    transition: transform 1s linear;
+}
+
